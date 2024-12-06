@@ -1,0 +1,116 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: 
+    color: 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+/* Header section */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color:
+}
+
+h1 {
+    color: 
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+}
+
+/* Smoothie card styles */
+.smoothie {
+    background-color: 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.smoothie:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background-color:
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: 
+
+
+.ingredients {
+    display: none;
+    margin-top: 10px;
+}
+
+input[type="password"] {
+    padding: 8px;
+    border: 1px solid 
+    border-radius: 5px;
+    width: 80%; 
+    margin-bottom: 10px;
+}
+
+.ingredient-list {
+    margin-top: 10px;
+    color: 
+    display: none; 
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Slogan styling */
+.slogan {
+    margin: 20px auto;
+    padding: 15px 10px;
+    background-color: 
+    color: #00796b; 
+    font-size: 1.25em; 
+    font-weight: bold;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 800px; 
+    text-align: center;
+}
+
+\
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
