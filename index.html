@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitstreer - Organic Smoothies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fruitstreer</h1>
+        <p>100% Organic Smoothies with No Added Sugar or Preservatives</p>
+    </header>
+
+    <main>
+        <section class="smoothie" id="strawberry">
+            <h2>Strawberry Smoothie</h2>
+            <p>Delicious and refreshing strawberry smoothie.</p>
+            <button class="buy-now">Buy Now</button>
+            <button class="show-ingredients" onclick="toggleIngredients('strawberry-ingredients')">Show Ingredients</button>
+            <div class="ingredients" id="strawberry-ingredients" style="display: none;">
+                <input type="password" placeholder="Enter Password" id="strawberry-password">
+                <button onclick="checkPassword('strawberry')">Submit</button>
+                <p class="ingredient-list" id="strawberry-list" style="display: none;">Ingredients: Strawberries, Water, Ice</p>
+            </div>
+        </section>
+
+        <section class="smoothie" id="apple">
+            <h2>Apple Smoothie</h2>
+            <p>Refreshing apple smoothie with a hint of cinnamon.</p>
+            <button class="buy-now">Buy Now</button>
+            <button class="show-ingredients" onclick="toggleIngredients('apple-ingredients')">Show Ingredients</button>
+            <div class="ingredients" id="apple-ingredients" style="display: none;">
+                <input type="password" placeholder="Enter Password" id="apple-password">
+                <button onclick="checkPassword('apple')">Submit</button>
+                <p class="ingredient-list" id="apple-list" style="display: none;">Ingredients: Apples, Water, Ice</p>
+            </div>
+        </section>
+
+        <section class="smoothie" id="mix-fruit">
+            <h2>Mixed Fruit Smoothie</h2>
+            <p>A delightful mix of seasonal fruits.</p>
+            <button class="buy-now">Buy Now</button>
+            <button class="show-ingredients" onclick="toggleIngredients('mix-fruit-ingredients')">Show Ingredients</button>
+            <div class="ingredients" id="mix-fruit-ingredients" style="display: none;">
+                <input type="password" placeholder="Enter Password" id="mix-fruit-password">
+                <button onclick="checkPassword('mix-fruit')">Submit</button>
+                <p class="ingredient-list" id="mix-fruit-list" style="display: none;">Ingredients: Mixed Fruits, Water, Ice</p>
+            </div>
+        </section>
+
+        <!-- Slogan Section -->
+        <section class="slogan">
+            <p class="slogan-text">"Choose wellness, not just sweetness."</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fruitstreer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleIngredients(ingredientId) {
+            const ingredientsDiv = document.getElementById(ingredientId);
+            // Toggle the visibility of the ingredients section
+            ingredientsDiv.style.display = ingredientsDiv.style.display === 'none' || ingredientsDiv.style.display === '' ? 'block' : 'none';
+
+            // Clear the password input when showing the password field
+            if (ingredientsDiv.style.display === 'block') {
+                const passwordInput = ingredientsDiv.querySelector('input[type="password"]');
+                if (passwordInput) {
+                    passwordInput.value = ''; // Clear the password input
+                }
+            }
+        }
+
+        function checkPassword(smoothie) {
+            const passwordInput = document.getElementById(`${smoothie}-password`).value;
+            const ingredientList = document.getElementById(`${smoothie}-list`);
+            const correctPassword = "ORGANIC"; // Set the correct password here
+
+            if (passwordInput === correctPassword) {
+                ingredientList.style.display = 'block'; // Show the ingredients
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
